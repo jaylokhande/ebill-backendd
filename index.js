@@ -7,4 +7,4 @@ app.use(bodyParser.urlencoded({extended:true}));
 const userRouter = require('./user');
 app.use('/user',userRouter);
 
-app.listen(3000,'192.168.1.8',console.log("your server start on port 3000"));  // 192.168.1.8
+app.listen(3000,console.log("your server start on port 3000"));  // 192.168.1.8
