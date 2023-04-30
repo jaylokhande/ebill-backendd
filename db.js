@@ -1,13 +1,18 @@
-const express = require('express');
+
 var mysql = require('mysql');
-const app = express();
+
 var connection = mysql.createConnection
 ({
-  host : 'localhost',
-  user : 'root',
-  password : '',
-  port : '3306',
-  database : 'loginregister'
+  // host : 'localhost',
+  // user : 'root',
+  // password : '',
+  // port : '3306',
+  // database : 'loginregister'
+  host : process.env.host_name,
+  user : process.env.user_name,
+  password : process.env.password_name,
+  port : process.env.port_name,
+  database : process.env.database_name
 }) ;
 connection.connect(function(err){
   if(err) throw err ;
